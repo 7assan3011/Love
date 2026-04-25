@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOR BASBOOSA</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-mobile.css" />
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Blaka&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="hearts-container"></div>
+    <section id="sec1" class="sec active se1">
+      <div class="box1">
+        <h2 lang="ar">💗انتي بسملة؟💗</h2>
+        <h3>💝i love u so much💝</h3>
+        <button id="btn1">
+          <h2 lang="ar">اه</h2>
+        </button>
+      </div>
+    </section>
+
+    <section id="sec2" class="sec se2">
+      <div class="box2">
+        <h2 lang="ar">💗💓انا بحبك اوي و محبتش قدك عمري💓💗</h2>
+        <h2 style="color: white" lang="ar">
+          💝انتي احلى حد دخل حياتي و اكتر حد وثقت فيه ف حياتي💝
+        </h2>
+        <h2 lang="ar">
+          💘انتي اللي طلعتيني من اسوأ مراحل كانت في حياتي و رجعتيني تاني عايز
+          اعيش و اعيش عشانك💘
+        </h2>
+        <h2 style="color: white" lang="ar">
+          💕حبيت حياتي معاكي و حبيت فيكي كل تفاصيلك(شخصيتك و شكلك و حبك ليا و
+          سمع كلامك) و كل حاجه حبيتها💕
+        </h2>
+        <h2 lang="ar">💟دنيتي معاكي حاجه تانيه غير اي وقت عيشتو ف حياتي💟</h2>
+        <h2 style="color: white" lang="ar">
+          كلمة بابا منك بتوديني ف حته تانيه ولا بصاتك ليا ولا خوفك عليا ولا💘
+          غيرتك و حتى وقت زعلانا عمري ما فكرت اسيبك💖 و عمري ما شكيت فيكي انتي
+          اكتر حاجه حلوة ف حياتي💞💗
+        </h2>
+        <button id="btn2">NEXT</button>
+      </div>
+    </section>
+    <section id="sec3" class="sec se3">
+      <h1 lang="ar">احلى اوقات واحنا مع بعض</h1>
+      <div class="datna">
+        <h2 lang="ar">❣تاريخ تعارفنا❣</h2>
+        <h2 lang="ar">💝23/12/2025💝</h2>
+        <div class="divBo">
+          <div class="bo-container">
+            <h3 class="bo" id="days">0</h3>
+            <span lang="ar" style="font-size: 20px">يوم</span>
+          </div>
+          <div class="bo-container">
+            <h3 class="bo" id="hours">0</h3>
+            <span lang="ar" style="font-size: 20px">ساعة</span>
+          </div>
+          <div class="bo-container">
+            <h3 class="bo" id="minutes">0</h3>
+            <span lang="ar" style="font-size: 20px">دقيقة</span>
+          </div>
+          <div class="bo-container">
+            <h3 class="bo" id="seconds">0</h3>
+            <span lang="ar" style="font-size: 20px">ثانية</span>
+          </div>
+        </div>
+        <h2 style="font-size: 15px" lang="ar">
+          كل ثانية بتعدي و انتي في قلبي💘
+        </h2>
+      </div>
+
+      <div class="custom-player">
+        <audio id="myAudio">
+          <source id="audioSource" src="media/1.ogg" type="audio/ogg" />
+          متصفحك لا يدعم مشغل الصوت.
+        </audio>
+        <h4 lang="ar">ريكاتك اللي بحبها</h4>
+        <span id="track-name"></span>
+        <div class="custom-controls">
+          <button
+            class="btnAudio heart-btn"
+            onclick="prevTrack()"
+            title="السابق"
+          >
+            <span class="heart-icon">⬅️</span>
+            <span class="btn-text">Prev</span>
+          </button>
+
+          <button
+            class="btnAudio heart-btn"
+            id="playBtn"
+            onclick="togglePlay()"
+            title="تشغيل"
+          >
+            <span class="heart-icon" id="playIcon">▶️</span>
+            <span class="btn-text">Play</span>
+          </button>
+
+          <button
+            class="btnAudio heart-btn"
+            onclick="nextTrack()"
+            title="التالي"
+          >
+            <span class="heart-icon">➡️</span>
+            <span class="btn-text">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="screens">
+        <h2 lang="ar">😍الاستارز بتاعتك اللي بعشقها</h2>
+        <div>
+          <div id="arrowL"><img src="img/arrow.png" alt=""></div>
+          <img src="/img/1.jpeg" alt="" />
+          <div id="arrowR"><img src="img/arrow.png" alt=""></div>
+        </div>
+      </div>
+      <div class="mini-player-fixed">
+        <audio id="singleAudio">
+          <source src="media/your-file.ogg" type="audio/ogg" />
+        </audio>
+
+        <div class="mini-player-info">
+          <span class="music-icon"
+            ><img class="imgMusic" src="/img/1.jpeg" alt=""
+          /></span>
+          <div class="text-data">
+            <span class="song-title">Our Special Memory</span>
+            <div class="progress-container-mini">
+              <div class="progress-fill" id="fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="play-circle" id="toggleBtn" onclick="handleSinglePlay()">
+          <span id="stateIcon">▶️</span>
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

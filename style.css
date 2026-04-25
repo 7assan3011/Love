@@ -1,0 +1,502 @@
+* {
+  font-family: "Rubik Gemstones", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+:lang(ar) {
+  font-family: "Blaka", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  margin: 0;
+}
+html,
+body {
+  margin: 0;
+}
+@keyframes showw {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.shw {
+  animation: showw 1s;
+}
+.sec {
+  min-height: 100vh;
+  display: none;
+  background-color: rgb(255, 126, 147);
+}
+
+.sec.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1 {
+  background-color: rgb(187, 0, 31);
+  margin: 0px;
+  width: 80%;
+  height: 430px;
+  border: solid 2px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 70px white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.box1 h2 {
+  margin: 0;
+  color: aliceblue;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+}
+.box1 h3 {
+  color: rgb(122, 2, 2);
+  text-align: center;
+}
+.box1 h3:lang(ar) {
+  color: rgb(122, 2, 2);
+  text-align: center;
+  font-size: 25px;
+  margin: o;
+}
+#btn1 {
+  width: 100px;
+  padding: 0;
+  background-color: rgb(255, 0, 0);
+  border: solid 3px black;
+  border-radius: 10px;
+}
+.box1 button h2 {
+  color: white;
+  text-align: center;
+  margin: 6px;
+  font-size: 30px;
+}
+#btn1:hover {
+  animation: loveee 2s;
+}
+#btn1:active {
+  animation: loveee 2s;
+}
+@keyframes loveee {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+    background-color: rgb(255, 0, 140);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* //////////////////////// */
+body {
+  margin: 0;
+}
+
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  color: red;
+  animation: floatUp linear forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+.box2 {
+  width: 80%;
+  height: max-content;
+  padding: 20px;
+  border: solid 2px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 70px white;
+  text-align: center;
+  color: rgb(116, 0, 64);
+  font-size: 20px;
+  background-color: rgb(255, 33, 70);
+}
+@keyframes kalam {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.box2 h2 {
+  animation: kalam 3s infinite;
+}
+#btn2 {
+  width: 100px;
+  padding: 0;
+  background-color: rgb(255, 0, 0);
+  border: solid 3px black;
+  border-radius: 10px;
+  color: thistle;
+  height: 50px;
+  font-size: 25px;
+  font-family: "Blaka";
+  animation: kalam 3s infinite;
+  box-shadow: 0px 0px 70px white;
+}
+#btn2:hover {
+  animation: loveee 2s;
+}
+#btn2:active {
+  animation: loveee 2s;
+}
+.sec.se3.active {
+  display: flex !important;
+  justify-content: center !important; /* يوسطنه بالعرض (محور السينات) */
+  align-items: flex-start !important; /* يطلعه فوق خالص (محور الصادات) */
+  padding-top: 20px; /* مسافة بسيطة من فوق عشان ميبقاش لازق في السقف */
+  color: white;
+}
+.sec.se3.active h1 {
+  -webkit-text-stroke: 1px black;
+  background-color: rgb(255, 158, 174);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 0px 70px white;
+  width: fit-content;
+  padding: 20px;
+  margin: auto;
+  margin-top: 20px;
+}
+/* تخصيص السكرول بار لمتصفحات Chrome, Edge, and Safari */
+
+/* 1. المساحة الكلية للسكرول بار */
+::-webkit-scrollbar {
+  width: 14px; /* عرض السكرول */
+}
+
+/* 2. الخلفية (المسار) - خليتها وردي فاتح جداً عشان تليق مع الخلفية sec */
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 158, 174);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 3. المقبض (الجزء المتحرك) - واخد نفس لون الـ box1 */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(187, 0, 31);
+  border-radius: 20px; /* جعل الحواف دائرية ليتماشى مع الـ border-radius في صناديقك */
+  border: 3px solid rgb(255, 158, 174); /* بيعمل مسافة (Padding) وهمية حول المقبض */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. عند مرور الماوس على السكرول - اللون بيغمق شوية زي الـ h3 عندك */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(122, 2, 2);
+}
+
+/* تخصيص السكرول لمتصفح Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(187, 0, 31) rgb(255, 158, 174);
+}
+/* audio player */
+.player-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.controls {
+  margin-top: 20px;
+}
+.btnAudio {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.btnAudio:hover {
+  background-color: #0056b3;
+}
+#track-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+.se3 {
+    text-align: center;
+    color: white; /* افترضت إن الخلفية غامقة في الـ sec3 */
+}
+
+.custom-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: 'Rubik Gemstones', sans-serif; /* نفس الفونت بتاعك */
+}
+
+#track-name {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffb3c1; /* بينك فاتح */
+    text-shadow: 0 0 5px rgba(255, 179, 193, 0.7);
+}
+
+.custom-controls {
+    display: flex;
+    gap: 30px; /* مسافة بين القلبين */
+}
+
+/* ستايل الأزرار القلوب الأساسي */
+.heart-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+
+/* ستايل القلوب نفسها (Emojis) */
+.heart-icon {
+    font-size: 1rem; /* كبرت حجم القلب */
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 2px rgba(255, 77, 109, 0.5));
+}
+
+/* ستايل النص تحت القلب */
+.btn-text {
+    font-size: 0.9rem;
+    color: #ff85a1;
+    font-family: 'Blaka', sans-serif; /* فونت تاني من اللي استخدمتهم */
+}
+
+/* --- تأثير الـ Hover (التنور والنبض) --- */
+.heart-btn:hover {
+    transform: scale(1.15); /* القلب يكبر شوية */
+}
+
+.heart-btn:hover .heart-icon {
+    filter: drop-shadow(0 0 15px #ff4d6d) drop-shadow(0 0 25px #ff4d6d); /* تأثير الجلو */
+    animation: heartBeat 1s infinite; /* تأثير النبض */
+}
+
+/* أنيميشن النبض */
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.1); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.custom-player{
+  background-color: rgb(187, 0, 31);
+  width: fit-content;
+  padding: 10px;
+  border: solid 2px black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 70px white;
+  margin: auto;
+  margin-top: 20px;
+  opacity: 0.7;
+  padding-right: 70px;
+  padding-left: 70px;
+}
+.custom-player h4{
+  font-size: 20px;
+}
+/* datna */
+.datna {
+  background-color: rgb(255, 0, 43 , 0.3);
+  width: fit-content;
+  padding: 10px;
+  border: solid 2px black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 70px white;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+.datna h2 {
+  font-size: 30px;
+}
+.divBo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 30px;
+}
+.bo {
+  background-color: rgb(187, 0, 31);
+  width: 50px;
+  height: 50px;
+  border: solid 2px black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 70px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+/* new player */
+.mini-player-fixed {
+    position: fixed;
+    bottom: 25px;
+    left: 8%;
+    right: 8%;
+    background: #bb001f; /* اللون الأحمر بتاعك */
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: none; /* هيظهر بس في Sec3 */
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 15px white;
+    z-index: 99999;
+    border: 2px solid black;
+}
+
+.mini-player-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.music-icon {
+    font-size: 24px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.text-data {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.song-title {
+    color: white;
+    font-family: 'Blaka', serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.progress-container-mini {
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 2px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.play-circle {
+  background: #bb001f;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.imgMusic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/* الاسكرينات */
+.screens {
+  width: 80%;
+  margin: auto;
+  background-color: rgb(255, 33, 70);
+  border: solid 2px black;
+  border-radius: 20px;
+  margin-top: 100px;  
+  margin-bottom: 200px;
+}
+.screens img {
+  width: 80%;
+  border: solid 2px black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 70px white;
+  margin-bottom: 30px;
+}
+.screens div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* استهداف مباشر وقوي جداً */
+div[id^="arrow"], 
+span[id^="arrow"], 
+#arrowL, #arrowR {
+    border: none !important;
+    outline: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+#arrowL img, #arrowR img {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    /* ده عشان نلغي أي فريم المتصفح بيحطه للصورة */
+    -webkit-user-drag: none; 
+}
+#arrowL {
+    transform:scaleX(-1);
+    margin-right: 20px;
+}
