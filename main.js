@@ -146,10 +146,10 @@ btn2.addEventListener("click", () => {
 function handleSinglePlay() {
     if (mySingleAudio.paused) {
         mySingleAudio.play();
-        stateIcon.innerText = "⏸️";
+        stateIcon.innerHTML = '<img style="width: 35px;" src="img/pause-button.png" alt="">';
     } else {
         mySingleAudio.pause();
-        stateIcon.innerText = "▶️";
+        stateIcon.innerHTML = '<img style="width: 35px;" src="img/play-button.png" alt="">';
     }
 }
 
@@ -161,6 +161,92 @@ mySingleAudio.ontimeupdate = () => {
 
 // لما الأغنية تخلص يرجع الأيقونة لـ Play
 mySingleAudio.onended = () => {
-    stateIcon.innerText = "▶️";
+    stateIcon.innerHTML = '<img style="width: 35px;" src="img/play-button.png" alt="">';
     fill.style.width = "0%";
 };
+// الاستارز
+const imges = [
+    "img/1.jpeg",
+    "img/2.jpeg",
+    "img/3.jpeg",
+    "img/4.jpeg",
+    "img/5.jpeg",
+    "img/6.jpeg",
+    "img/7.jpeg",
+    "img/8.jpeg",
+    "img/9.jpeg",
+    "img/10.jpeg",
+    "img/11.jpeg",
+    "img/12.jpeg",
+    "img/13.jpeg",
+    "img/14.jpeg",
+    "img/15.jpeg",
+    "img/16.jpeg",
+    "img/17.jpeg",
+    "img/18.jpeg",
+    "img/19.jpeg",
+    "img/20.jpeg",
+    "img/21.jpeg",
+    "img/22.jpeg",
+    "img/23.jpeg",
+    "img/24.jpeg",
+    "img/25.jpeg",
+    "img/26.jpeg",
+    "img/27.jpeg",
+    "img/28.jpeg",
+    "img/29.jpeg",
+    "img/30.jpeg",
+    "img/31.jpeg",
+    "img/32.jpeg",
+    "img/33.jpeg",
+    "img/34.jpeg",
+    "img/35.jpeg",
+    "img/happy1.jpeg",
+    "img/happy2.jpeg",
+    "img/happy3.jpeg",
+    "img/happy4.jpeg",
+    "img/happy5.jpeg",
+    "img/happy6.jpeg",
+    "img/happy7.jpeg"
+]
+const arrowR = document.getElementById("arrowR")
+const arrowL = document.getElementById("arrowL")
+const imgStar = document.getElementById("imgStar")
+let i = 0
+arrowR.addEventListener("click" , ()=>{
+    i+= 1
+    let imgSnum = imges[i]
+    imgStar.src = imgSnum
+})
+arrowL.addEventListener("click", () => {
+    i--; // نقص العداد 1
+    
+    if (i < 0) {
+        i = imges.length - 1; // لو رجعنا قبل أول صورة روح لآخر واحدة
+    }
+    
+    imgStar.src = imges[i];
+});
+const arrowR2 = document.getElementById("arrowR2")
+const arrowL2 = document.getElementById("arrowL2")
+const imgPicture = document.getElementById("imgPicture")
+const ourImg = [
+    "img/ph1.jpeg",
+    "img/ph2.jpeg",
+]
+let j = 0
+arrowR2.addEventListener("click", () => {
+    j += 1; // زيادة العداد 1
+    if (j >= ourImg.length) {
+        j = 0; // لو تجاوزنا آخر صورة رجع لأول واحدة
+    }
+    imgPicture.src = ourImg[j];
+})
+arrowL2.addEventListener("click", () => {
+    j--; // نقص العداد 1
+    if (j < 0) {
+        j = ourImg.length - 1; // لو رجعنا قبل أول صورة روح لآخر واحدة
+    }
+    imgPicture.src = ourImg[j];
+}
+);

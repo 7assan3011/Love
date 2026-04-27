@@ -10,6 +10,7 @@
 }
 body {
   margin: 0;
+  background-color: rgb(255, 158, 174);
 }
 html,
 body {
@@ -456,16 +457,15 @@ body {
 }
 /* الاسكرينات */
 .screens {
-  width: 80%;
+  width: fit-content;
   margin: auto;
   background-color: rgb(255, 33, 70);
   border: solid 2px black;
   border-radius: 20px;
-  margin-top: 100px;  
-  margin-bottom: 200px;
+  margin:100px 20px 100px 20px;
 }
 .screens img {
-  width: 80%;
+  width: 60%;
   border: solid 2px black;
   border-radius: 20px;
   box-shadow: 0px 0px 70px white;
@@ -474,29 +474,46 @@ body {
 .screens div{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 20px;
 }
 /* استهداف مباشر وقوي جداً */
-div[id^="arrow"], 
-span[id^="arrow"], 
-#arrowL, #arrowR {
+/* استهداف الكلاسات الجديدة للأسهم */
+.arrowL, .arrowR {
+    display: inline-flex !important; /* مهم جداً عشان الـ width يشتغل */
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;  /* كبر المساحة زي ما إنت عايز */
+    height: 40px !important;
     border: none !important;
     outline: none !important;
-    background: none !important;
+    background: transparent !important;
     box-shadow: none !important;
+    cursor: pointer;
+    transition: transform 0.3s ease;
     padding: 0 !important;
-    margin: 0 !important;
 }
 
-#arrowL img, #arrowR img {
+/* التحكم في الصورة اللي جوه الكلاس */
+.arrowL img, .arrowR img {
+    width: 40px !important; /* ده حجم السهم الفعلي */
+    height: auto;
     border: none !important;
     outline: none !important;
+    background: transparent !important;
     box-shadow: none !important;
-    /* ده عشان نلغي أي فريم المتصفح بيحطه للصورة */
-    -webkit-user-drag: none; 
+    display: block;
 }
-#arrowL {
-    transform:scaleX(-1);
-    margin-right: 20px;
+
+/* تأثير عند الحرك */
+.arrowL:hover, .arrowR:hover {
+    transform: scale(1.2);
+}
+
+/* مسافة بين الأسهم والصورة اللي في النص */
+.arrowL {
+    margin-left: 25px !important;
+}
+.arrowR {
+    margin-right: 25px !important;
 }
