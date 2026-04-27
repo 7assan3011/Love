@@ -517,3 +517,20 @@ body {
 .arrowR {
     margin-right: 25px !important;
 }
+/* the end */
+.theEnd {
+  width: fit-content;
+  margin: auto;
+  background-color: rgb(255, 33, 70);
+  border: solid 2px black;
+  border-radius: 20px;
+  margin:100px 20px 0px 20px;
+  padding: 30px;
+  padding-bottom: 100px;
+}
+.theEnd h3 {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Marhey", serif !important;
+}
