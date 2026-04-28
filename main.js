@@ -233,6 +233,11 @@ const imgPicture = document.getElementById("imgPicture")
 const ourImg = [
     "img/ph1.jpeg",
     "img/ph2.jpeg",
+    "img/ph3.jpeg",
+    "img/ph4.jpeg",
+    "img/ph5.jpeg",
+    "img/ph6.jpeg",
+    "img/ph7.jpeg"
 ]
 let j = 0
 arrowR2.addEventListener("click", () => {
